@@ -1,0 +1,333 @@
+/* pc */
+@media (min-width:992px) {
+    .mobile-header {
+        display: none;
+    }
+}
+
+/* tablet && mobile */
+@media (max-width:991.98px) {
+
+    /* ẩn navbar */
+    .navbar {
+        display: none;
+    }
+
+    /* chuyển logo vào giữa */
+    .header-top {
+        position: relative;
+    }
+
+    .header__logo {
+        position: absolute;
+        left: 50%;
+        translate: -50% -50%;
+    }
+
+    /* canh lại vị trí menu icon */
+    .menu-header__icon {
+        color: #fff;
+        width: 24px;
+        position: absolute;
+        top: 38px;
+        left: 26px;
+    }
+
+    /* overplay  */
+    .menu-overplay {
+        position: fixed;
+        background-color: rgba(0, 0, 0, 0.3);
+        inset: 0;
+        z-index: 1;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.5s;
+    }
+
+    /* kiểm tra checkbox để hiện hoặc ẩn overplay */
+    .menu-checkbox:checked~.menu-overplay {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    /* code menu */
+    .menu-drawer {
+        position: fixed;
+        background-color: #000;
+        inset: 0 40% 0 0;
+        z-index: 2;
+        transform: translateX(-100%);
+        transition: 1s;
+        padding: 60px;
+    }
+
+    /* kiểm tra nếu checkbox được check thì hiện phần menu */
+    .menu-checkbox:checked~.menu-drawer {
+        transform: translateX(0);
+    }
+
+    /* menu top */
+    .close__menu {
+        width: 24px;
+        color: #fff;
+    }
+
+    .menu-drawer__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #navbar__list--mobile {
+        margin-top: 25px;
+    }
+
+    .navbar__link {
+        display: block;
+        font-size: 2rem;
+    }
+
+    .navbar__link:hover {
+        background-color: #2b2828;
+        border-radius: 5px;
+    }
+
+    /* responsive phần hero */
+    .hero {
+        flex-direction: column-reverse;
+        row-gap: 100px;
+    }
+
+    .hero__content {
+        width: 80%;
+        margin: 20px auto;
+        text-align: center;
+    }
+
+    .hero__row {
+        justify-content: center;
+    }
+
+    /* responsive phần service */
+    .service__row {
+        flex-direction: column;
+        row-gap: 20px;
+    }
+
+    .service__list {
+        text-align: center;
+    }
+
+    .service__desc {
+        text-align: center;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .service__img {
+        width: 100%;
+    }
+
+    .service-item {
+        width: 90%;
+        text-align: start;
+    }
+
+    .work__list {
+        grid-template-columns: 1fr;
+        row-gap: 30px;
+    }
+
+    /* responsive phần work list */
+    .about-row {
+        flex-direction: column;
+        row-gap: 30px;
+    }
+
+    .about__img--small {
+        display: none;
+    }
+
+    .about__media {
+        width: 100%;
+    }
+
+    .about__img--big {
+        width: 100%;
+        margin: 25px auto;
+        border-radius: 15px;
+    }
+
+    .about-content {
+        width: 90%;
+        text-align: center;
+    }
+
+    /* responsive phần team */
+    .team__list {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 40px;
+    }
+
+    /* responsive phần install  */
+    .install__img {
+        display: none;
+    }
+
+    .install__content {
+        margin: 0 auto;
+        width: 90%;
+    }
+
+    /* responsive phần blog  */
+    .blog__inner {
+        flex-direction: column-reverse;
+        row-gap: 30px;
+    }
+
+    .blog__content {
+        width: 90%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* tablet */
+@media (min-width:768px) and (max-width:991.98px) {
+
+    .show-on-mobi {
+        display: none;
+    }
+
+    /* footer */
+    .footer-hideen-tablet {
+        display: none;
+    }
+
+    .footer__top {
+        grid-template-columns: 0.5fr 0.5fr 1fr;
+    }
+}
+
+/* mobile */
+@media (max-width:767.98px) {
+    .header__action {
+        display: none;
+    }
+
+    .header__logo {
+        margin-top: 20px;
+    }
+
+    .menu-drawer {
+        padding: 40px;
+        inset: 0 20% 0 0;
+    }
+
+    .navbar__item {
+        list-style: none;
+    }
+
+    .separate {
+        border-top: 1.5px solid #fff;
+        margin: 10px 0;
+    }
+
+    /* hero  */
+    .hero__img--small {
+        display: none;
+    }
+
+    .hero__img--large {
+        width: 100%;
+        height: auto;
+    }
+
+    .hero__heading {
+        font-size: 3rem;
+    }
+
+    .hero__row {
+        flex-direction: column;
+        row-gap: 30px;
+    }
+
+    /* service */
+    .service {
+        padding: 70px 0;
+    }
+
+    .service__desc {
+        width: 100%;
+    }
+
+    .service__img {
+        height: auto;
+    }
+
+    /* work */
+    .work__desc {
+        width: 100%;
+    }
+
+    .work-item {
+        padding: 20px;
+    }
+
+    /* about */
+    .about {
+        margin-top: 20px;
+        padding: 40px 0;
+    }
+
+    .section-heading {
+        font-size: 3rem;
+    }
+
+    /* team  */
+    .team__list {
+        grid-template-columns: 1fr;
+    }
+
+    /* install */
+    .install__inner {
+        margin: 40px 0;
+        padding: 0 8px;
+    }
+
+    .install__content {
+        width: 250px
+    }
+
+    /* blog */
+    .blog__list {
+        grid-template-columns: 1fr;
+        row-gap: 30px;
+    }
+
+    .block__heading {
+        text-align: center;
+    }
+
+    /* appointment */
+    .appointment__inner {
+        padding: 10px 10px;
+    }
+
+    /* footer  */
+    .footer__top {
+        grid-template-columns: 1fr;
+        row-gap: 30px;
+    }
+
+    .footer__copyright {
+        margin-top: 20px;
+    }
+
+
+    .footer__copyright::before {
+        width: 100%;
+    }
+}
